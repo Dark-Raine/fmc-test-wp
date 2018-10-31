@@ -1,0 +1,152 @@
+.header {
+  background: $white;
+  border-bottom: 1px solid $header-underline;
+  padding: 20px 0;
+
+  .logo {
+    float: left;
+    width: 15%;
+
+    @include breakpoint(tablet) {
+      width: auto;
+    }
+
+    img {
+      border: 0;
+      float: left;
+      width: 100%;
+
+      @include breakpoint(tablet) {
+        height: 40px;
+        width: auto;
+      }
+    }
+  }
+
+  .button {
+    float: right;
+
+    @include breakpoint(tablet) {
+      margin: 0 20px 0 0;
+      position: absolute;
+      right: 70px;
+      top: 25px;
+    }
+
+    @include breakpoint(mobile) {
+      margin: 0;
+    }
+  }
+}
+
+nav {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+  z-index: 100;
+
+  @include breakpoint(tablet) {
+    background: #ddd;
+    margin-top: 0;
+    width: 100%;
+    position: absolute;
+    top: 81px;
+    left: 0;
+  }
+
+  > ul {
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint(tablet) {
+      padding: 20px 0;
+    }
+
+    &.opened {
+      border-bottom: 1px solid $black;
+    }
+
+    > li {
+      float: left;
+      height: 30px;
+      line-height: 1.5em;
+      list-style-type: none;
+      margin-right: 40px;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @include breakpoint (tablet) {
+        margin-left: 20px;
+      }
+    }
+
+    a {
+      color: $black;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-toggle {
+  cursor: pointer;
+  float: right;
+  height: 30px;
+  padding: 5px 15px 0 0;
+  position: relative;
+  width: 30px;
+
+  &::before {
+    background: $clr-primary;
+    box-shadow: 0 13px 0 0 $clr-primary, 0 26px 0 0 $clr-primary;
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 30px;
+  }
+
+  &.active {
+    // Could do some funk to turn into an 'X'
+  }
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: -60px;
+    right: 15px;
+  }
+}
+
+@include breakpoint(tablet) {
+  .js .nav-collapse {
+    display: none;
+
+    &.opened {
+      display: block;
+    }
+  }
+}
+
+body.admin-bar {
+
+  @include breakpoint(tablet) {
+
+    .header .button {
+      top: 55px;
+    }
+
+    nav {
+      top: 113px;
+    }
+
+  }
+
+}

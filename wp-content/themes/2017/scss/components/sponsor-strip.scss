@@ -1,0 +1,16 @@
+.sponsor-strip {
+  padding: 40px 0;
+  background: $white;
+  border-top: 1px solid $clr-primary;
+  border-bottom: 1px solid $clr-primary;
+
+  h3 {
+    color: $clr-primary;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

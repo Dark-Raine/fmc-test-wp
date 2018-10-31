@@ -1,0 +1,83 @@
+
+.hero {
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+
+  &__container {
+    padding: 125px;
+
+    @include breakpoint(tablet) {
+      padding: 80px 0;
+    }
+  }
+
+  &__content-wrapper {
+    max-width: 690px;
+    padding-left: 100px;
+
+    @include breakpoint(desktop) {
+      padding: 0 40px;
+    }
+  }
+
+  &__title,
+  &__text {
+    color: $white;
+  }
+
+  &__title {
+    color: $white;
+    display: inline-block;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 25px;
+    line-height: 1.3em;
+    position: relative;
+    max-width: 650px;
+
+    &::before {
+      border-bottom: 5px solid $clr-primary;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 40%;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    margin: 30px 0;
+    max-width: 670px;
+  }
+
+
+
+
+
+
+  // Page specific
+
+  &--resources
+
+  .hero {
+
+    &__content-wrapper {
+      position: relative;
+
+      .button {
+        top: 0;
+        position: absolute;
+        right: 0;
+
+        @include breakpoint(tablet) {
+          position: static;
+        }
+      }
+    }
+
+  }
+}

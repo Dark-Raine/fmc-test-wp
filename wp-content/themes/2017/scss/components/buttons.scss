@@ -1,0 +1,103 @@
+.button,
+.gform_button {
+  border: 0;
+  border-radius: 20px !important;
+  box-shadow: 0 0 1px transparent;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "soleil",sans-serif;
+  font-size: 20px !important;
+  font-weight: 400;
+  height: 35px;
+  line-height: 1.5em;
+  margin-right: 5px !important;
+  margin-top: 10px;
+  overflow: hidden;
+  padding: 0 20px !important;
+  position: relative;
+  text-decoration: none;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: .3s;
+  transition-property: color;
+  vertical-align: middle;
+  background: $clr-primary;
+
+  &::before {
+    background: $clr-primary-hvr;
+  }
+
+  &--large {
+    font-size: 22px !important;
+    height: 45px;
+    line-height: 42px;
+    padding: 0 30px;
+
+    @include breakpoint(tablet) {
+      height: 35px;
+      line-height: 1.5em;
+    }
+  }
+
+  &--small {
+    font-size: 16px !important;
+    height: 25px;
+    padding: 0 10px;
+  }
+
+  &::before {
+    background: $clr-primary-hvr;
+    border-radius: 100%;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-radius: 20px;
+    color: $white;
+
+    &::before {
+      transform: scale(2);
+    }
+  }
+
+  &--primary {
+    background: $clr-primary;
+
+    &::before {
+      background: darken($clr-primary, 10%);
+    }
+  }
+
+  &--secondary {
+    background: $clr-secondary;
+
+    &::before {
+      background: darken($clr-secondary, 10%);
+    }
+  }
+
+  &.grey {
+    background: #CCCCCC;
+    color: $white;
+
+    &:before {
+      background: #CCCCCC;
+    }
+  }
+}
+
+.gform_footer {
+  padding-right: 16px !important;
+}

@@ -1,0 +1,22 @@
+.container--contact {
+
+  .gform_body {
+    li {
+      margin-right: 0;
+      padding-bottom: 20px;
+      padding-right: 0;
+
+      input {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .gform_footer {
+    input[type="submit"] {
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+.about-video-container {
+  padding: 80px 0;
+
+  .about-video {
+    background: $off-white;
+    height: 475px;
+    margin: auto;
+    max-width: 840px;
+
+    @include breakpoint(tablet) {
+      margin: 0 40px;
+    }
+  }
+}

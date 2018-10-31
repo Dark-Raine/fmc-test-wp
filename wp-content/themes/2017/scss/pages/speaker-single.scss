@@ -1,0 +1,104 @@
+.speaker-single {
+  max-width: 670px;
+
+  &__speaker-pic,
+  &__speaker-info {
+    float: left;
+    width: 60%;
+
+    @include breakpoint(tablet) {
+      margin: 0 10% 30px;
+      width: 80%;
+    }
+
+    @include breakpoint(500px) {
+      margin: 0 0 10px;
+      width: 100%;
+    }
+  }
+
+  &__speaker-pic {
+    width: 35%;
+    margin-right: 5%;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+      width: 100%;
+    }
+
+    img {
+      border: 0;
+      width: 100%;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__talk-title,
+  &__name {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__talk-title {
+    color: $black;
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      font-size: 32px;
+    }
+
+    &::before {
+      border-bottom: 2px solid $underline-grey-light;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 30%;
+    }
+  }
+
+  &__name {
+    color: $speaker-name;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+  }
+
+  &__icon {
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    text-decoration: none;
+
+    img {
+      border: 0;
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &__content {
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      margin: 0 10%;
+      width: 80%;
+    }
+
+    @include breakpoint(500px) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

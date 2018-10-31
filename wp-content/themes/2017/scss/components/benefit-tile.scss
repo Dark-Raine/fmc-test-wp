@@ -1,0 +1,33 @@
+.benefit-tile {
+  margin-bottom: 30px;
+
+  &__number {
+    color: $clr-primary;
+    display: inline-block;
+    font-size: 200px;
+    line-height: 170px;
+    opacity: .7;
+  }
+
+  img {
+    margin-left: 15px;
+    max-width: 50%;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 5px;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 300;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 40px;
+    }
+  }
+
+}

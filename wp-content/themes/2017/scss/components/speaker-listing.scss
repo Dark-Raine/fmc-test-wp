@@ -1,0 +1,58 @@
+.speaker-listing {
+  width: 100%;
+  margin: 60px 0 60px;
+
+  @include breakpoint(tablet) {
+    width: 60%;
+    margin: 60px 20%;
+  }
+
+  @include breakpoint(mobile) {
+    width: 80%;
+    margin: 60px 10%;
+  }
+
+  &__image {
+    float: right;
+    width: 30%;
+
+    img {
+      width: 100%;
+    }
+
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    width: 60%;
+    float: left;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__speech-title {
+    font-size: 25px;
+    color: $black;
+  }
+
+  &__speaker {
+    font-size: 18px;
+    color: #C0C0C0;
+  }
+
+  &--flip {
+
+    .speaker-listing__image {
+      float: left;
+    }
+
+    .speaker-listing__info {
+      float: right;
+    }
+
+  }
+}

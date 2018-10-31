@@ -1,0 +1,196 @@
+form {
+  button,
+  input,
+  textarea {
+    font-family: "soleil",sans-serif;
+    font-size: 18px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input,
+  button {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  input {
+    border: 1px solid $input-border;
+    padding: 0 20px;
+  }
+
+  button {
+    background: $clr-primary;
+    border: 0;
+    color: $white;
+    font-size: 20px;
+    height: 50px;
+    line-height: 1.5em;
+  }
+}
+
+
+.subscribe {
+  margin-top: 40px;
+
+  input {
+    border-right: 0;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 20px;
+    width: 80%;
+
+    @include breakpoint(tablet) {
+      border-right: 1px solid $input-border;
+    }
+
+    &:focus {
+      border: 1px solid $clr-primary;
+      border-right: 0;
+
+      @include breakpoint(tablet) {
+        border-right: 1px solid $clr-primary;
+      }
+    }
+  }
+
+  button {
+    width: 20%;
+  }
+
+  input,
+  button {
+    @include breakpoint(tablet) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+}
+
+.register-page {
+  &__form {
+    margin-top: 60px;
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  .input-container,
+  label,
+  input {
+    width: 100%;
+  }
+
+  .input-container {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  label {
+    color: $white;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  input {
+    border-radius: 10px;
+    height: 36px;
+    padding: 0 20px 0 10px;
+    width: 100% !important;
+  }
+
+  button {
+    border-radius: 20px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+#gform_wrapper_2 {
+  padding-bottom: 100px;
+  form {
+    position: relative;
+    width: 100%;
+
+    &::before,
+    &::after {
+      display: table;
+      clear: both;
+    }
+
+    &::after {
+      content: '';
+    }
+  }
+
+  .gform_body,
+  .gform_footer {
+    box-sizing: border-box !important;
+    float: left !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+
+  .gform_body {
+    float: left !important;
+    width: 80% !important;
+    left: 0 !important;
+
+    > ul > li {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    input {
+      width: 100% !important;
+      padding: 0 10px !important;
+      border-right: 0 !important;
+      box-sizing: border-box !important;
+      background: #F5F5F5 !important;
+
+      @include breakpoint(tablet) {
+        border-right: 1px solid #000 !important;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      width: 100% !important;
+      float: left !important;
+      position: static !important;
+      margin-bottom: 30px !important;
+    }
+  }
+
+  .gform_footer {
+    float: right !important;
+    width: 20% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 50px !important;
+    box-sizing: padding-box !important;
+    right: 0 !important;
+    top: 31px !important;
+
+    @include breakpoint(tablet) {
+      width: 100% !important;
+      float: left !important;
+      position: static !important;
+    }
+
+    #gform_submit_button_2 {
+      height: 100% !important;
+      width: 100% !important;
+      text-align: center !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+    }
+  }
+}

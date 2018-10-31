@@ -1,0 +1,67 @@
+body {
+  font-family: "soleil",sans-serif;
+}
+
+p,
+ul,
+li {
+  color: $black;
+  font-weight: 300;
+}
+
+ul {
+  margin: 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+
+  @include breakpoint(tablet) {
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-size: 25px;
+
+  &.underline {
+    position: relative;
+
+    &::before {
+
+      border-bottom: 3px solid $clr-primary;
+      bottom: -5px;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 50%;
+    }
+  }
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h2 {
+  &.location {
+    font-size: 32px !important;
+  }
+}

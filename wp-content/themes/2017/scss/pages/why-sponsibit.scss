@@ -1,0 +1,19 @@
+.why-sponsibit {
+  margin: auto;
+  max-width: 600px;
+  padding: 50px 0 100px;
+
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &--new {
+    max-width: none;
+  }
+}
+
+.border-bottom-primary {
+  border-bottom: 4px solid;
+  border-color: $clr-primary;
+}

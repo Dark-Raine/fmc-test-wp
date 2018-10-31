@@ -1,0 +1,39 @@
+.resource-post {
+  max-width: 670px;
+
+  &__title {
+    color: $black;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    padding-bottom: 30px;
+    position: relative;
+
+    &::before {
+      border-bottom: 5px solid $clr-primary;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 40%;
+    }
+  }
+
+  &__content {
+
+    h2,
+    h3,
+    h4 {
+      margin: 40px 0 5px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    img {
+      width: 100% important;
+    }
+  }
+}

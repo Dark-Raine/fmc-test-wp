@@ -1,0 +1,42 @@
+.resources-listing {
+  background: $off-white;
+  margin-bottom: 30px;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 40px !important;
+  }
+
+  a {
+    border: 0;
+    color: $black;
+    text-decoration: none;
+  }
+
+  img {
+    border: 0;
+    width: 100%;
+  }
+
+  &__details {
+    padding: 10px 20px 20px;
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+  }
+
+
+  &__stamp {
+    color: $off-black;
+    font-size: 16px;
+    font-weight: 300;
+
+    .author {
+      color: $black;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+footer {
+  background-color: $jet-black;
+  color: $white;
+  padding: 20px 0;
+
+  @include breakpoint(tablet) {
+    padding-top: 40px;
+  }
+
+  .column {
+    font-family: "soleil",sans-serif;
+    font-weight: 300;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 30px !important;
+      text-align: center;
+    }
+
+    img {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    &:nth-of-type(3n) {
+      text-align: center;
+    }
+
+    &:nth-of-type(4n) {
+      text-align: right;
+
+      @include breakpoint(tablet) {
+        text-align: center;
+      }
+    }
+  }
+}

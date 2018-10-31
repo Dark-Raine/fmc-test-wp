@@ -1,0 +1,98 @@
+.register-page {
+  background: $white;
+  height: 100%;
+
+  &__background {
+    float: right;
+    min-height: 100%;
+    padding: 70px 0;
+    width: 50%;
+
+    @include breakpoint(1060px) {
+      width: 100%;
+    }
+
+    &:last-child {
+      float: left;
+    }
+
+    &--white {
+      background: $white;
+    }
+
+    &--blue {
+      background: $register-form-bg;
+    }
+  }
+
+  &__form,
+  &__info {
+    width: calc((#{$break-desktop} / 2) - 50px);
+  }
+
+  &__form {
+    float: right;
+    padding-right: 80px;
+
+    @include breakpoint(1060px) {
+      float: none;
+      margin: auto;
+      padding: 0;
+    }
+
+    @include breakpoint(mobile) {
+      box-sizing: border-box;
+      padding: 0 20px;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    float: left;
+    padding-left: 50px;
+
+    @include breakpoint(1060px) {
+      float: none;
+      margin: auto;
+      padding: 0;
+    }
+
+    @include breakpoint(mobile) {
+      box-sizing: border-box;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0;
+      padding-bottom: 15px;
+      position: relative;
+    }
+
+    h1::before {
+      border-bottom: 4px solid $clr-primary;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 40%;
+    }
+
+    ul {
+      list-style: none;
+      list-style-image: url('images/tick.png');
+    }
+
+    li {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    ul,
+    li {
+      font-weight: 600;
+    }
+  }
+}

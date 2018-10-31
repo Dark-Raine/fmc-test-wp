@@ -1,0 +1,11 @@
+@mixin breakpoint($point) {
+  @if $point == 'desktop' {
+    @media (max-width: #{$break-desktop}) { @content ; }
+  } @else if $point == 'tablet' {
+    @media (max-width: #{$break-tablet}) { @content ; }
+  } @else if $point == 'mobile' {
+    @media (max-width: #{$break-mobile})  { @content ; }
+  } @else {
+    @media (max-width: $point) { @content ; }
+  }
+}
